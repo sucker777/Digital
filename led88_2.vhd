@@ -4,11 +4,10 @@ use ieee.numeric_std.all;
 
 entity led88_2 is
 port(clk:in std_logic;
-	  reset:in std_logic;
 	  Gcount,Rcount:in std_logic_vector(0 to 6);
 	  row:out std_logic_vector(0 to 7); 
-	  Rcol:out std_logic_vector(0 to 7);
-	  Gcol:out std_logic_vector(0 to 7));
+	  Gcol:out std_logic_vector(0 to 7);
+	  Rcol:out std_logic_vector(0 to 7));
 end led88_2;
 
 
@@ -125,7 +124,10 @@ begin
 			row_counter <= row_counter+1;
 			if row_counter = 7 then
 				frame_counter <= frame_counter+1;
+			elsif frame_counter > 12 then
+				frame_counter<=0;
 			end if;
+			
 		end if;
 	end process;
 
