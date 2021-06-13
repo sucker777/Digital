@@ -1,0 +1,49 @@
+# do Poker.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module Poker_Controller
+# 
+# Top level modules:
+# 	Poker_Controller
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module Poker_Controller_vlg_sample_tst
+# -- Compiling module Poker_Controller_vlg_check_tst
+# -- Compiling module Poker_Controller_vlg_vec_tst
+# 
+# Top level modules:
+# 	Poker_Controller_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver -c -voptargs=\"+acc\" -t 1ps -novopt work.Poker_Controller_vlg_vec_tst 
+# Loading work.Poker_Controller_vlg_vec_tst
+# Loading work.Poker_Controller
+# Loading altera_ver.dffeas
+# Loading work.Poker_Controller_vlg_sample_tst
+# Loading work.Poker_Controller_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# ERROR! Vector Mismatch for output port Current_Seg[0] :: @time = 1000000.000 ps
+#      Expected value = 0000
+#      Real value = 1010
+# ERROR! Vector Mismatch for output port Current_Seg[2] :: @time = 1000000.000 ps
+#      Expected value = 0000
+#      Real value = 1010
+# ERROR! Vector Mismatch for output port Random_Seg[0] :: @time = 1000000.000 ps
+#      Expected value = 0000
+#      Real value = 1000
+# ERROR! Vector Mismatch for output port Current_Seg[3] :: @time = 1040000.000 ps
+#      Expected value = 0000
+#      Real value = 1011
+# ERROR! Vector Mismatch for output port Random_Seg[1] :: @time = 1040000.000 ps
+#      Expected value = 0000
+#      Real value = 1101
+# ERROR! Vector Mismatch for output port Random_Seg[3] :: @time = 1040000.000 ps
+#      Expected value = 0000
+#      Real value = 1101
+# ERROR! Vector Mismatch for output port Current_Seg[1] :: @time = 1120000.000 ps
+#      Expected value = 0000
+#      Real value = 1100
+# ERROR! Vector Mismatch for output port Random_Seg[2] :: @time = 1180000.000 ps
+#      Expected value = 0000
+#      Real value = 0111
+#           8 mismatched vectors : Simulation failed !
+# ** Note: $finish    : TEST.vwf.vt(388)
+#    Time: 4 us  Iteration: 0  Instance: /Poker_Controller_vlg_vec_tst/tb_out

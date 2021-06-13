@@ -1,0 +1,63 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity Poker_Controller is
+port (clk:in std_logic;
+    A0:in std_logic;
+    B0:in std_logic;
+	a:out std_logic;
+    b:out std_logic;
+    c:out std_logic;
+    d:out std_logic;
+    e:out std_logic;
+    f:out std_logic;
+    g:out std_logic);
+end U10816020_Final_3;
+
+architecture internal of U10816020_Final_3 is
+    signal temp:std_logic_vector(0 to 2):="000";
+    signal output:std_logic_vector(0 to 6):="0000000";
+
+    begin
+        process(clk)
+        begin
+            if rising_edge(clk) then
+                if temp = "111" then 
+                    temp <= "000";
+                else
+                    temp <= temp + 1;
+                end if;
+                if A0 = '1' and B0 = '1' then
+                    case temp is
+                        when "000" => output <= "1011011";
+                        when "001" => output <= "0000001";
+                        when "010" => output <= "0001111";
+                        when "011" => output <= "0000001";
+                        when "100" => output <= "0011101";
+                        when "101" => output <= "0000001";
+                        when "110" => output <= "1100111";
+                        when "111" => output <= "0000001";
+                    end case;
+                else
+                    case temp is
+                        when "000" => output <= "1100111";
+                        when "001" => output <= "0000001";
+                        when "010" => output <= "0110000";
+                        when "011" => output <= "0000001";
+                        when "100" => output <= "1111101";
+                        when "101" => output <= "0000001";
+                        when "110" => output <= "0111011";
+                        when "111" => output <= "0000001";
+                    end case;
+                end if;
+            end if;
+            a <= output(0);
+            b <= output(1);
+            c <= output(2);
+            d <= output(3);
+            e <= output(4);
+            f <= output(5);
+            g <= output(6);
+        end process;
+end internal;

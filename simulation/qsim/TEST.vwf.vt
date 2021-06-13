@@ -1,0 +1,556 @@
+// Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/13/2021 23:39:31"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Poker_Controller
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Poker_Controller_vlg_sample_tst(
+	clk,
+	P1_Race,
+	P1_Roll,
+	P2_Race,
+	P2_Roll,
+	Switch,
+	sampler_tx
+);
+input  clk;
+input  P1_Race;
+input  P1_Roll;
+input  P2_Race;
+input  P2_Roll;
+input  Switch;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or P1_Race or P1_Roll or P2_Race or P2_Roll or Switch)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Poker_Controller_vlg_check_tst (
+	Current_Seg,
+	P1Score_Seg,
+	P2Score_Seg,
+	Random_Seg,
+	sampler_rx
+);
+input [0:3] Current_Seg;
+input [0:1] P1Score_Seg;
+input [0:1] P2Score_Seg;
+input [0:3] Random_Seg;
+input sampler_rx;
+
+reg [0:3] Current_Seg_expected;
+reg [0:1] P1Score_Seg_expected;
+reg [0:1] P2Score_Seg_expected;
+reg [0:3] Random_Seg_expected;
+
+reg [0:3] Current_Seg_prev;
+reg [0:1] P1Score_Seg_prev;
+reg [0:1] P2Score_Seg_prev;
+reg [0:3] Random_Seg_prev;
+
+reg [0:3] Current_Seg_expected_prev;
+reg [0:1] P1Score_Seg_expected_prev;
+reg [0:1] P2Score_Seg_expected_prev;
+reg [0:3] Random_Seg_expected_prev;
+
+reg [0:3] last_Current_Seg_exp;
+reg [0:1] last_P1Score_Seg_exp;
+reg [0:1] last_P2Score_Seg_exp;
+reg [0:3] last_Random_Seg_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	Current_Seg_prev = Current_Seg;
+	P1Score_Seg_prev = P1Score_Seg;
+	P2Score_Seg_prev = P2Score_Seg;
+	Random_Seg_prev = Random_Seg;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	Current_Seg_expected_prev = Current_Seg_expected;
+	P1Score_Seg_expected_prev = P1Score_Seg_expected;
+	P2Score_Seg_expected_prev = P2Score_Seg_expected;
+	Random_Seg_expected_prev = Random_Seg_expected;
+end
+
+
+// expected Current_Seg[ 3 ]
+initial
+begin
+	Current_Seg_expected[3] = 1'bX;
+	Current_Seg_expected[3] = #999000 1'b0;
+end 
+// expected Current_Seg[ 2 ]
+initial
+begin
+	Current_Seg_expected[2] = 1'bX;
+	Current_Seg_expected[2] = #999000 1'b0;
+end 
+// expected Current_Seg[ 1 ]
+initial
+begin
+	Current_Seg_expected[1] = 1'bX;
+	Current_Seg_expected[1] = #999000 1'b0;
+end 
+// expected Current_Seg[ 0 ]
+initial
+begin
+	Current_Seg_expected[0] = 1'bX;
+	Current_Seg_expected[0] = #999000 1'b0;
+end 
+// expected Random_Seg[ 3 ]
+initial
+begin
+	Random_Seg_expected[3] = 1'bX;
+	Random_Seg_expected[3] = #999000 1'b0;
+end 
+// expected Random_Seg[ 2 ]
+initial
+begin
+	Random_Seg_expected[2] = 1'bX;
+	Random_Seg_expected[2] = #999000 1'b0;
+end 
+// expected Random_Seg[ 1 ]
+initial
+begin
+	Random_Seg_expected[1] = 1'bX;
+	Random_Seg_expected[1] = #999000 1'b0;
+end 
+// expected Random_Seg[ 0 ]
+initial
+begin
+	Random_Seg_expected[0] = 1'bX;
+	Random_Seg_expected[0] = #999000 1'b0;
+end 
+// expected P1Score_Seg[ 1 ]
+initial
+begin
+	P1Score_Seg_expected[1] = 1'bX;
+end 
+// expected P1Score_Seg[ 0 ]
+initial
+begin
+	P1Score_Seg_expected[0] = 1'bX;
+end 
+// expected P2Score_Seg[ 1 ]
+initial
+begin
+	P2Score_Seg_expected[1] = 1'bX;
+end 
+// expected P2Score_Seg[ 0 ]
+initial
+begin
+	P2Score_Seg_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(Current_Seg_expected or Current_Seg or P1Score_Seg_expected or P1Score_Seg or P2Score_Seg_expected or P2Score_Seg or Random_Seg_expected or Random_Seg)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected Current_Seg = %b | expected P1Score_Seg = %b | expected P2Score_Seg = %b | expected Random_Seg = %b | ",Current_Seg_expected_prev,P1Score_Seg_expected_prev,P2Score_Seg_expected_prev,Random_Seg_expected_prev);
+	$display("| real Current_Seg = %b | real P1Score_Seg = %b | real P2Score_Seg = %b | real Random_Seg = %b | ",Current_Seg_prev,P1Score_Seg_prev,P2Score_Seg_prev,Random_Seg_prev);
+`endif
+	if (
+		( Current_Seg_expected_prev[0] !== 1'bx ) && ( Current_Seg_prev[0] !== Current_Seg_expected_prev[0] )
+		&& ((Current_Seg_expected_prev[0] !== last_Current_Seg_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Current_Seg[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Current_Seg_expected_prev);
+		$display ("     Real value = %b", Current_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Current_Seg_exp[0] = Current_Seg_expected_prev[0];
+	end
+	if (
+		( Current_Seg_expected_prev[1] !== 1'bx ) && ( Current_Seg_prev[1] !== Current_Seg_expected_prev[1] )
+		&& ((Current_Seg_expected_prev[1] !== last_Current_Seg_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Current_Seg[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Current_Seg_expected_prev);
+		$display ("     Real value = %b", Current_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Current_Seg_exp[1] = Current_Seg_expected_prev[1];
+	end
+	if (
+		( Current_Seg_expected_prev[2] !== 1'bx ) && ( Current_Seg_prev[2] !== Current_Seg_expected_prev[2] )
+		&& ((Current_Seg_expected_prev[2] !== last_Current_Seg_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Current_Seg[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Current_Seg_expected_prev);
+		$display ("     Real value = %b", Current_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Current_Seg_exp[2] = Current_Seg_expected_prev[2];
+	end
+	if (
+		( Current_Seg_expected_prev[3] !== 1'bx ) && ( Current_Seg_prev[3] !== Current_Seg_expected_prev[3] )
+		&& ((Current_Seg_expected_prev[3] !== last_Current_Seg_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Current_Seg[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Current_Seg_expected_prev);
+		$display ("     Real value = %b", Current_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Current_Seg_exp[3] = Current_Seg_expected_prev[3];
+	end
+	if (
+		( P1Score_Seg_expected_prev[0] !== 1'bx ) && ( P1Score_Seg_prev[0] !== P1Score_Seg_expected_prev[0] )
+		&& ((P1Score_Seg_expected_prev[0] !== last_P1Score_Seg_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P1Score_Seg[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P1Score_Seg_expected_prev);
+		$display ("     Real value = %b", P1Score_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_P1Score_Seg_exp[0] = P1Score_Seg_expected_prev[0];
+	end
+	if (
+		( P1Score_Seg_expected_prev[1] !== 1'bx ) && ( P1Score_Seg_prev[1] !== P1Score_Seg_expected_prev[1] )
+		&& ((P1Score_Seg_expected_prev[1] !== last_P1Score_Seg_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P1Score_Seg[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P1Score_Seg_expected_prev);
+		$display ("     Real value = %b", P1Score_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_P1Score_Seg_exp[1] = P1Score_Seg_expected_prev[1];
+	end
+	if (
+		( P2Score_Seg_expected_prev[0] !== 1'bx ) && ( P2Score_Seg_prev[0] !== P2Score_Seg_expected_prev[0] )
+		&& ((P2Score_Seg_expected_prev[0] !== last_P2Score_Seg_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P2Score_Seg[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P2Score_Seg_expected_prev);
+		$display ("     Real value = %b", P2Score_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_P2Score_Seg_exp[0] = P2Score_Seg_expected_prev[0];
+	end
+	if (
+		( P2Score_Seg_expected_prev[1] !== 1'bx ) && ( P2Score_Seg_prev[1] !== P2Score_Seg_expected_prev[1] )
+		&& ((P2Score_Seg_expected_prev[1] !== last_P2Score_Seg_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P2Score_Seg[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P2Score_Seg_expected_prev);
+		$display ("     Real value = %b", P2Score_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_P2Score_Seg_exp[1] = P2Score_Seg_expected_prev[1];
+	end
+	if (
+		( Random_Seg_expected_prev[0] !== 1'bx ) && ( Random_Seg_prev[0] !== Random_Seg_expected_prev[0] )
+		&& ((Random_Seg_expected_prev[0] !== last_Random_Seg_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Random_Seg[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Random_Seg_expected_prev);
+		$display ("     Real value = %b", Random_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_Random_Seg_exp[0] = Random_Seg_expected_prev[0];
+	end
+	if (
+		( Random_Seg_expected_prev[1] !== 1'bx ) && ( Random_Seg_prev[1] !== Random_Seg_expected_prev[1] )
+		&& ((Random_Seg_expected_prev[1] !== last_Random_Seg_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Random_Seg[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Random_Seg_expected_prev);
+		$display ("     Real value = %b", Random_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_Random_Seg_exp[1] = Random_Seg_expected_prev[1];
+	end
+	if (
+		( Random_Seg_expected_prev[2] !== 1'bx ) && ( Random_Seg_prev[2] !== Random_Seg_expected_prev[2] )
+		&& ((Random_Seg_expected_prev[2] !== last_Random_Seg_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Random_Seg[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Random_Seg_expected_prev);
+		$display ("     Real value = %b", Random_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_Random_Seg_exp[2] = Random_Seg_expected_prev[2];
+	end
+	if (
+		( Random_Seg_expected_prev[3] !== 1'bx ) && ( Random_Seg_prev[3] !== Random_Seg_expected_prev[3] )
+		&& ((Random_Seg_expected_prev[3] !== last_Random_Seg_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Random_Seg[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Random_Seg_expected_prev);
+		$display ("     Real value = %b", Random_Seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_Random_Seg_exp[3] = Random_Seg_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#4000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Poker_Controller_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg P1_Race;
+reg P1_Roll;
+reg P2_Race;
+reg P2_Roll;
+reg Switch;
+// wires                                               
+wire [0:3] Current_Seg;
+wire [0:1] P1Score_Seg;
+wire [0:1] P2Score_Seg;
+wire [0:3] Random_Seg;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Poker_Controller i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.Current_Seg(Current_Seg),
+	.P1_Race(P1_Race),
+	.P1_Roll(P1_Roll),
+	.P1Score_Seg(P1Score_Seg),
+	.P2_Race(P2_Race),
+	.P2_Roll(P2_Roll),
+	.P2Score_Seg(P2Score_Seg),
+	.Random_Seg(Random_Seg),
+	.Switch(Switch)
+);
+
+// Switch
+initial
+begin
+	Switch = 1'b1;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+
+// P1_Roll
+initial
+begin
+	P1_Roll = 1'b0;
+	P1_Roll = #210000 1'b1;
+	P1_Roll = #30000 1'b0;
+	P1_Roll = #120000 1'b1;
+	P1_Roll = #40000 1'b0;
+	P1_Roll = #90000 1'b1;
+	P1_Roll = #30000 1'b0;
+	P1_Roll = #160000 1'b1;
+	P1_Roll = #50000 1'b0;
+	P1_Roll = #100000 1'b1;
+	P1_Roll = #50000 1'b0;
+	P1_Roll = #130000 1'b1;
+	P1_Roll = #60000 1'b0;
+	P1_Roll = #90000 1'b1;
+	P1_Roll = #30000 1'b0;
+	P1_Roll = #130000 1'b1;
+	P1_Roll = #30000 1'b0;
+	P1_Roll = #170000 1'b1;
+	P1_Roll = #80000 1'b0;
+	P1_Roll = #160000 1'b1;
+	P1_Roll = #80000 1'b0;
+	P1_Roll = #320000 1'b1;
+	P1_Roll = #40000 1'b0;
+	P1_Roll = #40000 1'b1;
+	P1_Roll = #40000 1'b0;
+	P1_Roll = #600000 1'b1;
+	P1_Roll = #80000 1'b0;
+	P1_Roll = #120000 1'b1;
+	P1_Roll = #120000 1'b0;
+	P1_Roll = #160000 1'b1;
+	P1_Roll = #80000 1'b0;
+	P1_Roll = #120000 1'b1;
+	P1_Roll = #80000 1'b0;
+	P1_Roll = #160000 1'b1;
+	P1_Roll = #40000 1'b0;
+end 
+
+// P2_Roll
+initial
+begin
+	P2_Roll = 1'b0;
+	P2_Roll = #290000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #90000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #100000 1'b1;
+	P2_Roll = #30000 1'b0;
+	P2_Roll = #160000 1'b1;
+	P2_Roll = #50000 1'b0;
+	P2_Roll = #110000 1'b1;
+	P2_Roll = #60000 1'b0;
+	P2_Roll = #120000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #100000 1'b1;
+	P2_Roll = #50000 1'b0;
+	P2_Roll = #140000 1'b1;
+	P2_Roll = #60000 1'b0;
+	P2_Roll = #160000 1'b1;
+	P2_Roll = #80000 1'b0;
+	P2_Roll = #400000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #40000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #40000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #480000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #120000 1'b1;
+	P2_Roll = #80000 1'b0;
+	P2_Roll = #200000 1'b1;
+	P2_Roll = #120000 1'b0;
+	P2_Roll = #120000 1'b1;
+	P2_Roll = #40000 1'b0;
+	P2_Roll = #160000 1'b1;
+	P2_Roll = #80000 1'b0;
+end 
+
+// P1_Race
+initial
+begin
+	P1_Race = 1'b0;
+	P1_Race = #1370000 1'b1;
+	P1_Race = #30000 1'b0;
+	P1_Race = #360000 1'b1;
+	P1_Race = #40000 1'b0;
+	P1_Race = #600000 1'b1;
+	P1_Race = #120000 1'b0;
+end 
+
+// P2_Race
+initial
+begin
+	P2_Race = 1'b0;
+	P2_Race = #1880000 1'b1;
+	P2_Race = #160000 1'b0;
+end 
+
+Poker_Controller_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.P1_Race(P1_Race),
+	.P1_Roll(P1_Roll),
+	.P2_Race(P2_Race),
+	.P2_Roll(P2_Roll),
+	.Switch(Switch),
+	.sampler_tx(sampler)
+);
+
+Poker_Controller_vlg_check_tst tb_out(
+	.Current_Seg(Current_Seg),
+	.P1Score_Seg(P1Score_Seg),
+	.P2Score_Seg(P2Score_Seg),
+	.Random_Seg(Random_Seg),
+	.sampler_rx(sampler)
+);
+endmodule
+
