@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Poker
-Sun Jun 13 23:37:07 2021
+Mon Jun 14 18:09:51 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -13,13 +13,14 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,14 +47,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 13 23:37:07 2021       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 14 18:09:51 2021       ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                   ; Poker                                       ;
-; Top-level Entity Name           ; Poker_Controller                            ;
+; Top-level Entity Name           ; Poker                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 50                                          ;
-; Total pins                      ; 18                                          ;
+; Total registers                 ; 63                                          ;
+; Total pins                      ; 16                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -72,7 +73,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; Poker_Controller   ; Poker              ;
+; Top-level entity name                                                           ; Poker              ; Poker              ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -172,63 +173,93 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                          ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; Poker_Controller.vhd             ; yes             ; User VHDL File  ; C:/Users/PartMent/Documents/Quartus/Poker/Poker_Controller.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+---------+
+; Poker_Controller.vhd             ; yes             ; User VHDL File                           ; C:/Users/PartMent/Documents/Quartus/Poker/Poker_Controller.vhd ;         ;
+; Poker.bdf                        ; yes             ; User Block Diagram/Schematic File        ; C:/Users/PartMent/Documents/Quartus/Poker/Poker.bdf            ;         ;
+; segcontroller.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/PartMent/Documents/Quartus/Poker/segcontroller.bdf    ;         ;
+; seg.vhd                          ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/seg.vhd              ;         ;
+; decimal.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/decimal.vhd          ;         ;
+; led88_2.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/led88_2.vhd          ;         ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 40        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 65        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 13        ;
-;     -- 5 input functions                    ; 4         ;
-;     -- 4 input functions                    ; 11        ;
-;     -- <=3 input functions                  ; 37        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 50        ;
-;                                             ;           ;
-; I/O pins                                    ; 18        ;
-; Total DSP Blocks                            ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 50        ;
-; Total fan-out                               ; 421       ;
-; Average fan-out                             ; 2.79      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 76          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 120         ;
+;     -- 7 input functions                    ; 1           ;
+;     -- 6 input functions                    ; 30          ;
+;     -- 5 input functions                    ; 10          ;
+;     -- 4 input functions                    ; 13          ;
+;     -- <=3 input functions                  ; 66          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 63          ;
+;                                             ;             ;
+; I/O pins                                    ; 16          ;
+; Total DSP Blocks                            ; 0           ;
+; Maximum fan-out node                        ; CLOCK~input ;
+; Maximum fan-out                             ; 63          ;
+; Total fan-out                               ; 677         ;
+; Average fan-out                             ; 3.15        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |Poker_Controller          ; 65 (65)           ; 50 (50)      ; 0                 ; 0          ; 18   ; 0            ; |Poker_Controller   ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                            ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+--------------+
+; |Poker                     ; 120 (0)           ; 63 (0)       ; 0                 ; 0          ; 16   ; 0            ; |Poker                                   ; work         ;
+;    |Poker_Controller:inst| ; 69 (69)           ; 50 (50)      ; 0                 ; 0          ; 0    ; 0            ; |Poker|Poker_Controller:inst             ; work         ;
+;    |SegController:inst1|   ; 51 (0)            ; 13 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1               ; work         ;
+;       |Decimal:inst1|      ; 4 (4)             ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1|Decimal:inst1 ; work         ;
+;       |Decimal:inst|       ; 4 (4)             ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1|Decimal:inst  ; work         ;
+;       |seg:inst2|          ; 43 (43)           ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1|seg:inst2     ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; random_number[3]                       ; Merged with Random_Seg[3]~reg0         ;
-; random_number[2]                       ; Merged with Random_Seg[2]~reg0         ;
-; random_number[1]                       ; Merged with Random_Seg[1]~reg0         ;
-; random_number[0]                       ; Merged with Random_Seg[0]~reg0         ;
-; current_state[2..9,11..31]             ; Merged with current_state[10]          ;
-; current_state[10]                      ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 34 ;                                        ;
-+----------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                ;
++-----------------------------------------------------+-------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                 ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------------+------------------------+
+; SegController:inst1|seg:inst2|de[0]                 ; SegController:inst1|seg:inst2|Mux37 ; yes                    ;
+; SegController:inst1|seg:inst2|de[1]                 ; SegController:inst1|seg:inst2|Mux37 ; yes                    ;
+; SegController:inst1|seg:inst2|de[2]                 ; SegController:inst1|seg:inst2|Mux37 ; yes                    ;
+; SegController:inst1|seg:inst2|temp[0]               ; SegController:inst1|seg:inst2|Mux32 ; yes                    ;
+; SegController:inst1|seg:inst2|temp[1]               ; SegController:inst1|seg:inst2|Mux32 ; yes                    ;
+; SegController:inst1|seg:inst2|temp[2]               ; SegController:inst1|seg:inst2|Mux32 ; yes                    ;
+; SegController:inst1|seg:inst2|temp[3]               ; SegController:inst1|seg:inst2|Mux32 ; yes                    ;
+; SegController:inst1|seg:inst2|temp[4]               ; SegController:inst1|seg:inst2|Mux32 ; yes                    ;
+; SegController:inst1|seg:inst2|temp[5]               ; SegController:inst1|seg:inst2|Mux32 ; yes                    ;
+; SegController:inst1|seg:inst2|temp[6]               ; SegController:inst1|seg:inst2|Mux32 ; yes                    ;
+; Number of user-specified and inferred latches = 10  ;                                     ;                        ;
++-----------------------------------------------------+-------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++--------------------------------------------------+-----------------------------------------------------+
+; Register name                                    ; Reason for Removal                                  ;
++--------------------------------------------------+-----------------------------------------------------+
+; Poker_Controller:inst|random_number[0]           ; Merged with Poker_Controller:inst|Random_Seg[0]     ;
+; Poker_Controller:inst|random_number[1]           ; Merged with Poker_Controller:inst|Random_Seg[1]     ;
+; Poker_Controller:inst|random_number[2]           ; Merged with Poker_Controller:inst|Random_Seg[2]     ;
+; Poker_Controller:inst|random_number[3]           ; Merged with Poker_Controller:inst|Random_Seg[3]     ;
+; Poker_Controller:inst|current_state[2..9,11..31] ; Merged with Poker_Controller:inst|current_state[10] ;
+; Poker_Controller:inst|current_state[10]          ; Stuck at GND due to stuck port data_in              ;
+; Total Number of Removed Registers = 34           ;                                                     ;
++--------------------------------------------------+-----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -236,37 +267,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 50    ;
+; Total registers                              ; 63    ;
 ; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 43    ;
+; Number of registers using Clock Enable       ; 47    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; temp[3]                                ; 5       ;
-; current_player[0]                      ; 5       ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; Poker_Controller:inst|current_player[0] ; 5       ;
+; Poker_Controller:inst|temp[3]           ; 5       ;
+; Total number of inverted registers = 2  ;         ;
++-----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Poker_Controller|Random_Seg[3]~reg0 ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Poker_Controller|current_number[3]  ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Poker_Controller|current_player[11] ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Poker_Controller|current_state[1]   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|Random_Seg[0]     ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Poker|Poker_Controller:inst|current_player[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|p1_score[0]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|p2_score[0]       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|current_number[0] ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|current_state[0]  ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |Poker|SegController:inst1|seg:inst2|Mux21     ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Poker|SegController:inst1|seg:inst2|Mux27     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -274,25 +309,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 50                          ;
-;     ENA               ; 12                          ;
+; arriav_ff             ; 63                          ;
+;     ENA               ; 16                          ;
 ;     ENA SCLR          ; 31                          ;
-;     plain             ; 7                           ;
-; arriav_lcell_comb     ; 65                          ;
+;     plain             ; 16                          ;
+; arriav_lcell_comb     ; 120                         ;
 ;     arith             ; 31                          ;
 ;         1 data inputs ; 30                          ;
 ;         2 data inputs ; 1                           ;
-;     normal            ; 34                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 88                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 11                          ;
-;         5 data inputs ; 4                           ;
-;         6 data inputs ; 13                          ;
-; boundary_port         ; 18                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 27                          ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 30                          ;
+; boundary_port         ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.04                        ;
+; Average LUT depth     ; 3.01                        ;
 +-----------------------+-----------------------------+
 
 
@@ -311,23 +348,147 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Sun Jun 13 23:37:05 2021
+    Info: Processing started: Mon Jun 14 18:09:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Poker -c Poker
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file poker_controller.vhd
     Info (12022): Found design unit 1: Poker_Controller-internal
     Info (12023): Found entity 1: Poker_Controller
-Info (12127): Elaborating entity "Poker_Controller" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file poker.bdf
+    Info (12023): Found entity 1: Poker
+Info (12127): Elaborating entity "Poker" for the top level hierarchy
+Warning (275080): Converted elements in bus name "DE" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "DE[0..2]" to "DE0..2"
+    Warning (275081): Converted element name(s) from "DE[1]" to "DE1"
+    Warning (275081): Converted element name(s) from "DE[2]" to "DE2"
+    Warning (275081): Converted element name(s) from "DE[0]" to "DE0"
+Warning (12125): Using design file segcontroller.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SegController
+Info (12128): Elaborating entity "SegController" for hierarchy "SegController:inst1"
+Warning (275085): Found inconsistent dimensions for element "counter1"
+Warning (275085): Found inconsistent dimensions for element "counter2"
+Warning (275085): Found inconsistent dimensions for element "c"
+Warning (275085): Found inconsistent dimensions for element "d"
+Warning (275080): Converted elements in bus name "c" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "c[0..1]" to "c0..1"
+    Warning (275081): Converted element name(s) from "c[0]" to "c0"
+    Warning (275081): Converted element name(s) from "c[1]" to "c1"
+Warning (275080): Converted elements in bus name "counter1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "counter1[3..0]" to "counter13..0"
+    Warning (275081): Converted element name(s) from "counter1[3]" to "counter13"
+    Warning (275081): Converted element name(s) from "counter1[2]" to "counter12"
+    Warning (275081): Converted element name(s) from "counter1[1]" to "counter11"
+    Warning (275081): Converted element name(s) from "counter1[0]" to "counter10"
+Warning (275080): Converted elements in bus name "counter2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "counter2[3..0]" to "counter23..0"
+    Warning (275081): Converted element name(s) from "counter2[3]" to "counter23"
+    Warning (275081): Converted element name(s) from "counter2[2]" to "counter22"
+    Warning (275081): Converted element name(s) from "counter2[1]" to "counter21"
+    Warning (275081): Converted element name(s) from "counter2[0]" to "counter20"
+Warning (275080): Converted elements in bus name "d" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "d[0..1]" to "d0..1"
+    Warning (275081): Converted element name(s) from "d[0]" to "d0"
+    Warning (275081): Converted element name(s) from "d[1]" to "d1"
+Warning (275080): Converted elements in bus name "de" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "de[0]" to "de0"
+    Warning (275081): Converted element name(s) from "de[1]" to "de1"
+    Warning (275081): Converted element name(s) from "de[2]" to "de2"
+    Warning (275081): Converted element name(s) from "de[0..2]" to "de0..2"
+Warning (12125): Using design file seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: seg-oo
+    Info (12023): Found entity 1: seg
+Info (12128): Elaborating entity "seg" for hierarchy "SegController:inst1|seg:inst2"
+Warning (10492): VHDL Process Statement warning at seg.vhd(43): signal "op" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at seg.vhd(22): inferring latch(es) for signal or variable "de", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at seg.vhd(22): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "temp[6]" at seg.vhd(22)
+Info (10041): Inferred latch for "temp[5]" at seg.vhd(22)
+Info (10041): Inferred latch for "temp[4]" at seg.vhd(22)
+Info (10041): Inferred latch for "temp[3]" at seg.vhd(22)
+Info (10041): Inferred latch for "temp[2]" at seg.vhd(22)
+Info (10041): Inferred latch for "temp[1]" at seg.vhd(22)
+Info (10041): Inferred latch for "temp[0]" at seg.vhd(22)
+Info (10041): Inferred latch for "de[2]" at seg.vhd(22)
+Info (10041): Inferred latch for "de[1]" at seg.vhd(22)
+Info (10041): Inferred latch for "de[0]" at seg.vhd(22)
+Warning (12125): Using design file decimal.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Decimal-a
+    Info (12023): Found entity 1: Decimal
+Info (12128): Elaborating entity "Decimal" for hierarchy "SegController:inst1|Decimal:inst"
+Info (12128): Elaborating entity "Poker_Controller" for hierarchy "Poker_Controller:inst"
+Warning (12125): Using design file led88_2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: led88_2-l88
+    Info (12023): Found entity 1: led88_2
+Info (12128): Elaborating entity "led88_2" for hierarchy "led88_2:inst4"
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(137): signal "frame_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(139): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(139): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(144): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(144): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(161): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(161): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(166): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(166): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(178): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(178): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(183): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(183): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(195): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(195): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(200): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(200): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(212): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(212): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(217): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(217): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(229): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(229): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(234): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(234): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(246): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(246): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(251): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(251): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(263): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(263): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(268): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(268): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(280): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(280): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(285): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(285): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(297): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(297): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(302): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(302): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13012): Latch SegController:inst1|seg:inst2|de[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[0]
+Warning (13012): Latch SegController:inst1|seg:inst2|de[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[1]
+Warning (13012): Latch SegController:inst1|seg:inst2|temp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[1]
+Warning (13012): Latch SegController:inst1|seg:inst2|temp[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[2]
+Warning (13012): Latch SegController:inst1|seg:inst2|temp[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[2]
+Warning (13012): Latch SegController:inst1|seg:inst2|temp[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[1]
+Warning (13012): Latch SegController:inst1|seg:inst2|temp[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[1]
+Warning (13012): Latch SegController:inst1|seg:inst2|temp[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[1]
+Warning (13012): Latch SegController:inst1|seg:inst2|temp[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[2]
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 141 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 68 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Sun Jun 13 23:37:07 2021
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 125 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Mon Jun 14 18:09:51 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

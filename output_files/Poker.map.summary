@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Jun 13 23:37:07 2021
+Analysis & Synthesis Status : Successful - Mon Jun 14 18:09:51 2021
 Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
 Revision Name : Poker
-Top-level Entity Name : Poker_Controller
+Top-level Entity Name : Poker
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 50
-Total pins : 18
+Total registers : 63
+Total pins : 16
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

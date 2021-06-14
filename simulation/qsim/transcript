@@ -2,17 +2,15 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module Poker_Controller
+# -- Compiling module Poker
 # 
 # Top level modules:
-# 	Poker_Controller
+# 	Poker
 # Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module Poker_Controller_vlg_sample_tst
-# -- Compiling module Poker_Controller_vlg_check_tst
-# -- Compiling module Poker_Controller_vlg_vec_tst
+# -- Compiling module Poker_vlg_vec_tst
 # 
 # Top level modules:
-# 	Poker_Controller_vlg_vec_tst
+# 	Poker_vlg_vec_tst
 # vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver -c -voptargs=\"+acc\" -t 1ps -novopt work.Poker_Controller_vlg_vec_tst 
 # Loading work.Poker_Controller_vlg_vec_tst
 # Loading work.Poker_Controller

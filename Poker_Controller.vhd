@@ -9,10 +9,10 @@ port (clk:in std_logic;
     P2_Roll:in std_logic;
     P1_Race:in std_logic;
     P2_Race:in std_logic;
-    Random_Seg:out std_logic_vector(0 to 3);
     Current_Seg:out std_logic_vector(0 to 3);
     P1Score_Seg:out std_logic_vector(0 to 1);
-    P2Score_Seg:out std_logic_vector(0 to 1));
+    P2Score_Seg:out std_logic_vector(0 to 1);
+    Random_Seg:out std_logic_vector(0 to 3));
 end Poker_Controller;
 
 architecture internal of Poker_Controller is
@@ -56,6 +56,13 @@ architecture internal of Poker_Controller is
         begin
             --Roller
             if rising_edge(clk) then
+                --Reset
+                if Switch = '0' then
+                    current_number <= "0000";
+                    current_state <= 0;
+                    p1_score <= "00";
+                    p2_score <= "00";
+                end if;
                 --Is someone wins?
                 if p1_score = "11" or p2_score = "11" then
                     current_state <= 2;
