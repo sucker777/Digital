@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 
 entity led88_2 is
 port(clk:in std_logic;
-	  Gcount,Rcount:in std_logic_vector(0 to 6);
+	  GRcount:in std_logic_vector(0 to 6);
+	  DE:in std_logic_vector(0 to 2);
 	  row:out std_logic_vector(0 to 7); 
 	  Gcol:out std_logic_vector(0 to 7);
 	  Rcol:out std_logic_vector(0 to 7));
@@ -135,12 +136,12 @@ begin
 	begin
 		case frame_counter is
 				when 0 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= Gwin0(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= Rwin0(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -157,12 +158,12 @@ begin
 					row <=(others => '0');
 					row(to_integer(row_counter))<= '1';
 				when 2 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win1(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win1(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -174,12 +175,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 3 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win2(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win2(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -191,12 +192,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 4 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win3(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win3(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -208,12 +209,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 5 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win4(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win4(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -225,12 +226,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 6 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win5(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win5(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -242,12 +243,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 7 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win6(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win6(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -259,12 +260,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 8 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win7(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win7(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -276,12 +277,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 9 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win8(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win8(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -293,12 +294,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 10 =>
-					if Gcount = "1111001" then
+					if GRcount = "1111001" and DE ="010" then
 						Gcol<= win9(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif Rcount = "1111001" then
+					elsif GRcount = "1111001" and DE ="011" then
 						Rcol<= win9(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
