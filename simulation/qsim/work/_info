@@ -4,11 +4,11 @@ K3
 cModel Technology
 Z0 dC:\Users\PartMent\Documents\Quartus\Poker\simulation\qsim
 vPoker
-Z1 !s100 C5_A<Ld5`J;R]k55l68FX1
-Z2 IPCD45PGok@^ZK2e6UZRBW2
-Z3 VF2FfcJ84zeIe?[52EW^C?1
+Z1 !s100 h@lUJ3G@`M@ca4iRRS34V0
+Z2 IK^XiDFOiZQc``GJXf?U`W2
+Z3 V1?LmOC[Y@H^ZWahOOdGWg1
 Z4 dC:\Users\PartMent\Documents\Quartus\Poker\simulation\qsim
-Z5 w1623666963
+Z5 w1623764374
 Z6 8Poker.vo
 Z7 FPoker.vo
 L0 32
@@ -20,15 +20,14 @@ Z10 o-work work -O0
 Z11 n@poker
 !i10b 1
 !s85 0
-Z12 !s108 1623666964.524000
+Z12 !s108 1623764375.349000
 Z13 !s107 Poker.vo|
 !s101 -O0
 vPoker_Controller
-Z14 !s100 ^UMC59_ajXLII[IzdKCM^2
-Z15 IHT8UBV2Y85b?QS39N?>Ek1
-Z16 VL:YFBHXR_BcboAHz^gZ7F1
+Z14 IPSJB;<OjmQSSP?VAX1_DC0
+Z15 V0MA]:h2T9^;DbEM74lhS61
 R4
-Z17 w1623598773
+Z16 w1623688969
 R6
 R7
 L0 32
@@ -37,29 +36,30 @@ r1
 31
 R9
 R10
-Z18 n@poker_@controller
-Z19 !s108 1623598774.509000
+Z17 n@poker_@controller
+Z18 !s100 edM5:NTKfY:9XN_RlYHCL3
+Z19 !s108 1623688970.136000
 R13
 !i10b 1
 !s85 0
 !s101 -O0
 vPoker_Controller_vlg_check_tst
-Z20 IFoTAC4V>5el<e3R`8ZX[U0
-Z21 Vcc9hbP6RUYA??RIQEcSJP2
+Z20 !s100 <dL4G5da6>P=:WcB3d`nX1
+Z21 IFoTAC4V>5el<e3R`8ZX[U0
+Z22 Vcc9hbP6RUYA??RIQEcSJP2
 R4
-Z22 w1623598771
-Z23 8TEST.vwf.vt
-Z24 FTEST.vwf.vt
+Z23 w1623688967
+Z24 8TEST.vwf.vt
+Z25 FTEST.vwf.vt
 L0 68
 R8
 r1
 31
-Z25 !s108 1623598774.624000
-Z26 !s107 TEST.vwf.vt|
-Z27 !s90 -work|work|TEST.vwf.vt|
+Z26 !s108 1623688970.205000
+Z27 !s107 TEST.vwf.vt|
+Z28 !s90 -work|work|TEST.vwf.vt|
 R10
-Z28 n@poker_@controller_vlg_check_tst
-Z29 !s100 <dL4G5da6>P=:WcB3d`nX1
+Z29 n@poker_@controller_vlg_check_tst
 !i10b 1
 !s85 0
 !s101 -O0
@@ -68,16 +68,16 @@ Z30 !s100 a?5YhRkR=zilaE>fo;FBl1
 Z31 I:^kQnGhh87R[QD8GDKEZJ1
 Z32 VCg<VP8@`JUQf?Cb?gXfM:2
 R4
-R22
 R23
 R24
+R25
 L0 30
 R8
 r1
 31
-R25
 R26
 R27
+R28
 R10
 Z33 n@poker_@controller_vlg_sample_tst
 !i10b 1
@@ -88,42 +88,43 @@ Z34 !s100 f=RPbTWR4d863;>6z5Id`1
 Z35 IdJD0VhZ1lPiCOoM1=Bc_43
 Z36 V;lY33IT<>QcG86O3h8KZ<3
 R4
-R22
 R23
 R24
+R25
 Z37 L0 392
 R8
 r1
 31
-R25
 R26
 R27
+R28
 R10
 Z38 n@poker_@controller_vlg_vec_tst
 !i10b 1
 !s85 0
 !s101 -O0
 vPoker_vlg_check_tst
-Z39 !s100 ?FL93DYD3Xi3AldN2oPkc3
-Z40 Ik9enFV<<bLYkT7FnaLmMD2
-Z41 V]Z[FJL4[;IRoSO1k[[VC_1
+!i10b 1
+Z39 !s100 R`Y3M]S>2<jbOHUFFW^Ck0
+Z40 I10aQ]Qilg5z@=FDfWUk:82
+Z41 Vjl[co87>EKL4dAO4LD]oG0
 R4
-Z42 w1623666757
+Z42 w1623764373
 Z43 8TEST_FINAL.vwf.vt
 Z44 FTEST_FINAL.vwf.vt
 L0 68
 R8
 r1
+!s85 0
 31
-Z45 !s108 1623666759.910000
+Z45 !s108 1623764375.455000
 Z46 !s107 TEST_FINAL.vwf.vt|
 Z47 !s90 -work|work|TEST_FINAL.vwf.vt|
+!s101 -O0
 R10
 Z48 n@poker_vlg_check_tst
-!i10b 1
-!s85 0
-!s101 -O0
 vPoker_vlg_sample_tst
+!i10b 1
 Z49 !s100 _i;6=UKQ=m:4j>[PlIJP12
 Z50 I:Pm:4OJ4?cPG6X6eHjMih1
 Z51 Vaz1o`=U^P^J0YQ^Pm0Dn?3
@@ -134,32 +135,31 @@ R44
 L0 30
 R8
 r1
+!s85 0
 31
 R45
 R46
 R47
+!s101 -O0
 R10
 Z52 n@poker_vlg_sample_tst
-!i10b 1
-!s85 0
-!s101 -O0
 vPoker_vlg_vec_tst
 !i10b 1
-Z53 !s100 @JSmP_RJ=Fak`_SgVRl4:0
-Z54 IdeI5PFTZ;<[T4?2mUS<D43
+Z53 !s100 VjSE9HOzn=9HPhdDL1HFL0
+Z54 I;037a?cOnV:JEkl3Im?X`0
 Z55 VW67MiiUXE>EMcz68m7<=c3
 R4
-w1623666962
-R23
-R24
-L0 30
+R42
+R43
+R44
+Z56 L0 1115
 R8
 r1
 !s85 0
 31
-!s108 1623666964.604000
-!s107 TEST.vwf.vt|
-R27
+R45
+R46
+R47
 !s101 -O0
 R10
-Z56 n@poker_vlg_vec_tst
+Z57 n@poker_vlg_vec_tst

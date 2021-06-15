@@ -1,0 +1,128 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 152 272)
+	(text "bmelody" (rect 5 0 52 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 240 25 252)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 27 44 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DO3" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DO3" (rect 21 43 45 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "DOUP3" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "DOUP3" (rect 21 59 61 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "RE3" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "RE3" (rect 21 75 43 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "REUP3" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "REUP3" (rect 21 91 58 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "MI3" (rect 0 0 18 14)(font "Arial" (font_size 8)))
+		(text "MI3" (rect 21 107 39 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "FA3" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "FA3" (rect 21 123 44 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "FAUP3" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "FAUP3" (rect 21 139 59 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "SO3" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "SO3" (rect 21 155 45 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "SOUP3" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "SOUP3" (rect 21 171 61 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "LA3" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "LA3" (rect 21 187 44 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "LAUP3" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "LAUP3" (rect 21 203 59 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "SI3" (rect 0 0 17 14)(font "Arial" (font_size 8)))
+		(text "SI3" (rect 21 219 38 233)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "Buzzer" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "Buzzer" (rect 74 27 115 41)(font "Arial" (font_size 8)))
+		(line (pt 136 32)(pt 120 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 240))
+	)
+)

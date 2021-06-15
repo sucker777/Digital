@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Poker
-Mon Jun 14 18:09:51 2021
+Tue Jun 15 21:36:11 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -47,14 +47,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun 14 18:09:51 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 15 21:36:11 2021       ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                   ; Poker                                       ;
 ; Top-level Entity Name           ; Poker                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 63                                          ;
-; Total pins                      ; 16                                          ;
+; Total registers                 ; 101                                         ;
+; Total pins                      ; 53                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -183,6 +183,25 @@ agreement for further details.
 ; segcontroller.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/PartMent/Documents/Quartus/Poker/segcontroller.bdf    ;         ;
 ; seg.vhd                          ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/seg.vhd              ;         ;
 ; decimal.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/decimal.vhd          ;         ;
+; buzzer_com.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/PartMent/Documents/Quartus/Poker/buzzer_com.bdf       ;         ;
+; bmelody.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/PartMent/Documents/Quartus/Poker/bmelody.bdf          ;         ;
+; do_key.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/do_key.vhd           ;         ;
+; si_key.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/si_key.vhd           ;         ;
+; so_key.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/so_key.vhd           ;         ;
+; soup_key.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/soup_key.vhd         ;         ;
+; doup_key.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/doup_key.vhd         ;         ;
+; fa_key.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/fa_key.vhd           ;         ;
+; faup_key.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/faup_key.vhd         ;         ;
+; la_key.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/la_key.vhd           ;         ;
+; laup_key.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/laup_key.vhd         ;         ;
+; mi_key.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/mi_key.vhd           ;         ;
+; re_key.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/re_key.vhd           ;         ;
+; reup_key.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/reup_key.vhd         ;         ;
+; divf.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/PartMent/Documents/Quartus/Poker/divf.bdf             ;         ;
+; div50.vhd                        ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/div50.vhd            ;         ;
+; div250k.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/div250k.vhd          ;         ;
+; buzzer_multi.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/buzzer_multi.vhd     ;         ;
+; vhdl_music.vhd                   ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/vhdl_music.vhd       ;         ;
 ; led88_2.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/PartMent/Documents/Quartus/Poker/led88_2.vhd          ;         ;
 +----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+---------+
 
@@ -192,23 +211,23 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 76          ;
+; Estimate of Logic utilization (ALMs needed) ; 164         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 120         ;
-;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 30          ;
-;     -- 5 input functions                    ; 10          ;
-;     -- 4 input functions                    ; 13          ;
-;     -- <=3 input functions                  ; 66          ;
+; Combinational ALUT usage for logic          ; 255         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 72          ;
+;     -- 5 input functions                    ; 48          ;
+;     -- 4 input functions                    ; 22          ;
+;     -- <=3 input functions                  ; 113         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 63          ;
+; Dedicated logic registers                   ; 101         ;
 ;                                             ;             ;
-; I/O pins                                    ; 16          ;
+; I/O pins                                    ; 53          ;
 ; Total DSP Blocks                            ; 0           ;
 ; Maximum fan-out node                        ; CLOCK~input ;
-; Maximum fan-out                             ; 63          ;
-; Total fan-out                               ; 677         ;
-; Average fan-out                             ; 3.15        ;
+; Maximum fan-out                             ; 101         ;
+; Total fan-out                               ; 1468        ;
+; Average fan-out                             ; 3.18        ;
 +---------------------------------------------+-------------+
 
 
@@ -217,12 +236,13 @@ agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+--------------+
-; |Poker                     ; 120 (0)           ; 63 (0)       ; 0                 ; 0          ; 16   ; 0            ; |Poker                                   ; work         ;
+; |Poker                     ; 255 (0)           ; 101 (0)      ; 0                 ; 0          ; 53   ; 0            ; |Poker                                   ; work         ;
 ;    |Poker_Controller:inst| ; 69 (69)           ; 50 (50)      ; 0                 ; 0          ; 0    ; 0            ; |Poker|Poker_Controller:inst             ; work         ;
 ;    |SegController:inst1|   ; 51 (0)            ; 13 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1               ; work         ;
 ;       |Decimal:inst1|      ; 4 (4)             ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1|Decimal:inst1 ; work         ;
 ;       |Decimal:inst|       ; 4 (4)             ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1|Decimal:inst  ; work         ;
 ;       |seg:inst2|          ; 43 (43)           ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |Poker|SegController:inst1|seg:inst2     ; work         ;
+;    |led88_2:inst4|         ; 135 (135)         ; 38 (38)      ; 0                 ; 0          ; 0    ; 0            ; |Poker|led88_2:inst4                     ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -252,10 +272,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------+-----------------------------------------------------+
 ; Register name                                    ; Reason for Removal                                  ;
 +--------------------------------------------------+-----------------------------------------------------+
-; Poker_Controller:inst|random_number[0]           ; Merged with Poker_Controller:inst|Random_Seg[0]     ;
-; Poker_Controller:inst|random_number[1]           ; Merged with Poker_Controller:inst|Random_Seg[1]     ;
-; Poker_Controller:inst|random_number[2]           ; Merged with Poker_Controller:inst|Random_Seg[2]     ;
 ; Poker_Controller:inst|random_number[3]           ; Merged with Poker_Controller:inst|Random_Seg[3]     ;
+; Poker_Controller:inst|random_number[2]           ; Merged with Poker_Controller:inst|Random_Seg[2]     ;
+; Poker_Controller:inst|random_number[1]           ; Merged with Poker_Controller:inst|Random_Seg[1]     ;
+; Poker_Controller:inst|random_number[0]           ; Merged with Poker_Controller:inst|Random_Seg[0]     ;
 ; Poker_Controller:inst|current_state[2..9,11..31] ; Merged with Poker_Controller:inst|current_state[10] ;
 ; Poker_Controller:inst|current_state[10]          ; Stuck at GND due to stuck port data_in              ;
 ; Total Number of Removed Registers = 34           ;                                                     ;
@@ -267,12 +287,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 63    ;
-; Number of registers using Synchronous Clear  ; 31    ;
+; Total registers                              ; 101   ;
+; Number of registers using Synchronous Clear  ; 63    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Clock Enable       ; 81    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -288,20 +308,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|Random_Seg[0]     ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Poker|Poker_Controller:inst|current_player[4] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|p1_score[0]       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|p2_score[0]       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|current_number[0] ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|current_state[0]  ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |Poker|SegController:inst1|seg:inst2|Mux21     ;
-; 23:1               ; 4 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Poker|SegController:inst1|seg:inst2|Mux27     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|Random_Seg[2]      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Poker|led88_2:inst4|frame_counter[30]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Poker|led88_2:inst4|green1win                  ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Poker|Poker_Controller:inst|current_player[20] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|p1_score[0]        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|p2_score[0]        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|current_number[3]  ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |Poker|Poker_Controller:inst|current_state[10]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Poker|led88_2:inst4|Rcol                       ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |Poker|SegController:inst1|seg:inst2|Mux21      ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Poker|SegController:inst1|seg:inst2|Mux5       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -309,27 +332,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 63                          ;
-;     ENA               ; 16                          ;
-;     ENA SCLR          ; 31                          ;
-;     plain             ; 16                          ;
-; arriav_lcell_comb     ; 120                         ;
-;     arith             ; 31                          ;
-;         1 data inputs ; 30                          ;
+; arriav_ff             ; 101                         ;
+;     ENA               ; 18                          ;
+;     ENA SCLR          ; 63                          ;
+;     plain             ; 20                          ;
+; arriav_lcell_comb     ; 257                         ;
+;     arith             ; 63                          ;
+;         1 data inputs ; 62                          ;
 ;         2 data inputs ; 1                           ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 88                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 27                          ;
-;         4 data inputs ; 13                          ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 30                          ;
-; boundary_port         ; 16                          ;
+;     normal            ; 194                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 48                          ;
+;         6 data inputs ; 72                          ;
+; boundary_port         ; 53                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.01                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -348,7 +370,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Mon Jun 14 18:09:49 2021
+    Info: Processing started: Tue Jun 15 21:36:09 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Poker -c Poker
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file poker_controller.vhd
@@ -359,9 +381,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file poker.b
 Info (12127): Elaborating entity "Poker" for the top level hierarchy
 Warning (275080): Converted elements in bus name "DE" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "DE[0..2]" to "DE0..2"
+    Warning (275081): Converted element name(s) from "DE[0]" to "DE0"
     Warning (275081): Converted element name(s) from "DE[1]" to "DE1"
     Warning (275081): Converted element name(s) from "DE[2]" to "DE2"
-    Warning (275081): Converted element name(s) from "DE[0]" to "DE0"
 Warning (12125): Using design file segcontroller.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: SegController
 Info (12128): Elaborating entity "SegController" for hierarchy "SegController:inst1"
@@ -416,51 +438,105 @@ Warning (12125): Using design file decimal.vhd, which is not specified as a desi
     Info (12023): Found entity 1: Decimal
 Info (12128): Elaborating entity "Decimal" for hierarchy "SegController:inst1|Decimal:inst"
 Info (12128): Elaborating entity "Poker_Controller" for hierarchy "Poker_Controller:inst"
+Warning (12125): Using design file buzzer_com.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: buzzer_com
+Info (12128): Elaborating entity "buzzer_com" for hierarchy "buzzer_com:inst6"
+Warning (12125): Using design file bmelody.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: bmelody
+Info (12128): Elaborating entity "bmelody" for hierarchy "buzzer_com:inst6|bmelody:inst4"
+Warning (275043): Pin "Buzzer" is missing source
+Warning (12125): Using design file do_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: do_key-oo
+    Info (12023): Found entity 1: do_key
+Info (12128): Elaborating entity "do_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|do_key:inst"
+Warning (12125): Using design file si_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: si_key-oo
+    Info (12023): Found entity 1: si_key
+Info (12128): Elaborating entity "si_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|si_key:inst10"
+Warning (12125): Using design file so_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: so_key-oo
+    Info (12023): Found entity 1: so_key
+Info (12128): Elaborating entity "so_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|so_key:inst11"
+Warning (12125): Using design file soup_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: soup_key-oo
+    Info (12023): Found entity 1: soup_key
+Info (12128): Elaborating entity "soup_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|soup_key:inst12"
+Warning (12125): Using design file doup_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: doup_key-oo
+    Info (12023): Found entity 1: doup_key
+Info (12128): Elaborating entity "doup_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|doup_key:inst2"
+Warning (12125): Using design file fa_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: fa_key-oo
+    Info (12023): Found entity 1: fa_key
+Info (12128): Elaborating entity "fa_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|fa_key:inst3"
+Warning (12125): Using design file faup_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: faup_key-oo
+    Info (12023): Found entity 1: faup_key
+Info (12128): Elaborating entity "faup_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|faup_key:inst4"
+Warning (12125): Using design file la_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: la_key-oo
+    Info (12023): Found entity 1: la_key
+Info (12128): Elaborating entity "la_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|la_key:inst5"
+Warning (12125): Using design file laup_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: laup_key-oo
+    Info (12023): Found entity 1: laup_key
+Info (12128): Elaborating entity "laup_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|laup_key:inst6"
+Warning (12125): Using design file mi_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mi_key-oo
+    Info (12023): Found entity 1: mi_key
+Info (12128): Elaborating entity "mi_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|mi_key:inst7"
+Warning (12125): Using design file re_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: re_key-oo
+    Info (12023): Found entity 1: re_key
+Info (12128): Elaborating entity "re_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|re_key:inst8"
+Warning (12125): Using design file reup_key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: reup_key-oo
+    Info (12023): Found entity 1: reup_key
+Info (12128): Elaborating entity "reup_key" for hierarchy "buzzer_com:inst6|bmelody:inst4|reup_key:inst9"
+Warning (12125): Using design file divf.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divf
+Info (12128): Elaborating entity "divf" for hierarchy "buzzer_com:inst6|divf:inst"
+Warning (12125): Using design file div50.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: div50-Div_s2
+    Info (12023): Found entity 1: div50
+Info (12128): Elaborating entity "div50" for hierarchy "buzzer_com:inst6|divf:inst|div50:inst2"
+Warning (12125): Using design file div250k.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: div250k-Div_s1
+    Info (12023): Found entity 1: div250k
+Info (12128): Elaborating entity "div250k" for hierarchy "buzzer_com:inst6|divf:inst|div250k:inst"
+Warning (12125): Using design file buzzer_multi.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: buzzer_multi-oo
+    Info (12023): Found entity 1: buzzer_multi
+Info (12128): Elaborating entity "buzzer_multi" for hierarchy "buzzer_com:inst6|buzzer_multi:inst2"
+Warning (12125): Using design file vhdl_music.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: vhdl_music-oo
+    Info (12023): Found entity 1: vhdl_music
+Info (12128): Elaborating entity "vhdl_music" for hierarchy "buzzer_com:inst6|vhdl_music:inst3"
 Warning (12125): Using design file led88_2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: led88_2-l88
     Info (12023): Found entity 1: led88_2
 Info (12128): Elaborating entity "led88_2" for hierarchy "led88_2:inst4"
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(137): signal "frame_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(139): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(139): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(144): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(144): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(161): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(161): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(166): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(166): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(178): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(178): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(183): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(183): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(195): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(195): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(200): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(200): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(212): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(212): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(217): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(217): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(229): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(229): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(234): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(234): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(246): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(246): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(251): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(251): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(263): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(263): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(268): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(268): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(280): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(280): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(285): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(285): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(297): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(297): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(302): signal "GRcount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at led88_2.vhd(302): signal "DE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(163): signal "frame_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(165): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(170): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(187): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(192): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(204): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(209): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(221): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(226): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(238): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(243): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(255): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(260): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(272): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(277): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(289): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(294): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(306): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(311): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(323): signal "green1win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at led88_2.vhd(328): signal "red2win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (13012): Latch SegController:inst1|seg:inst2|de[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[0]
 Warning (13012): Latch SegController:inst1|seg:inst2|de[1] has unsafe behavior
@@ -479,16 +555,18 @@ Warning (13012): Latch SegController:inst1|seg:inst2|temp[5] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[1]
 Warning (13012): Latch SegController:inst1|seg:inst2|temp[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SegController:inst1|seg:inst2|op[2]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Buzzer" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 141 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 313 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 125 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Mon Jun 14 18:09:51 2021
+    Info (21059): Implemented 47 output pins
+    Info (21061): Implemented 260 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 102 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Tue Jun 15 21:36:11 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

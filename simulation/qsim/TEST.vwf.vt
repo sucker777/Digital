@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/14/2021 18:36:02"
+// Generated on "06/15/2021 20:07:17"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Poker
 // 
@@ -47,6 +47,9 @@ wire DE2;
 wire e;
 wire f;
 wire g;
+wire [7:0] Gcol;
+wire [7:0] Rcol;
+wire [7:0] row;
 
 // assign statements (if any)                          
 Poker i1 (
@@ -62,10 +65,13 @@ Poker i1 (
 	.e(e),
 	.f(f),
 	.g(g),
+	.Gcol(Gcol),
 	.P1_Race(P1_Race),
 	.P1_Roll(P1_Roll),
 	.P2_Race(P2_Race),
 	.P2_Roll(P2_Roll),
+	.Rcol(Rcol),
+	.row(row),
 	.Switch(Switch)
 );
 initial 

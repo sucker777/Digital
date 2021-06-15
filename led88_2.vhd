@@ -113,14 +113,40 @@ constant win9: matrix :=(("00000000"),
 								  
 signal row_counter:unsigned(0 to 2);
 
+signal green1win:std_logic:='0';
+signal red2win:std_logic:='0';
+signal do_win:std_logic:='0';
 constant clk_freq:integer:=12e4;
 constant scan_freq:integer:=4;
 signal clk_counter:integer;
 signal frame_counter:integer:=0;
 
 begin
-	counter_proc:process(clk)
+
+win_proc:process(clk,frame_counter)
+begin
+if rising_edge(clk) then
+	if GRcount="1111001" and DE="010" then
+		green1win<='1';
+		red2win<='0';
+	elsif GRcount="1111001" and DE="011" then
+		green1win<='0';
+		red2win<='1';
+	end if;
+
+	 do_win <=  green1win or red2win;
+	 
+	if frame_counter> 12 then
+		green1win<='0';
+		red2win<='0';
+		do_win <=  green1win or red2win;
+	end if;
+end if;
+end process;
+
+	counter_proc:process(clk,do_win)
 	begin
+	if do_win = '1' then
 		if rising_edge(clk) then
 			row_counter <= row_counter+1;
 			if row_counter = 7 then
@@ -128,20 +154,20 @@ begin
 			elsif frame_counter > 12 then
 				frame_counter<=0;
 			end if;
-			
 		end if;
+	end if;
 	end process;
 
 	output_proc:process (row_counter)
 	begin
 		case frame_counter is
 				when 0 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= Gwin0(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= Rwin0(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -158,12 +184,12 @@ begin
 					row <=(others => '0');
 					row(to_integer(row_counter))<= '1';
 				when 2 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win1(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win1(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -175,12 +201,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 3 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win2(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win2(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -192,12 +218,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 4 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win3(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win3(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -209,12 +235,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 5 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win4(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win4(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -226,12 +252,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 6 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win5(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win5(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -243,12 +269,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 7 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win6(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win6(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -260,12 +286,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 8 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win7(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win7(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -277,12 +303,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 9 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win8(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win8(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
@@ -294,12 +320,12 @@ begin
 						row(to_integer(row_counter))<= '1';
 					end if;
 				when 10 =>
-					if GRcount = "1111001" and DE ="010" then
+					if green1win = '1' then
 						Gcol<= win9(to_integer(row_counter));
 						Rcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');
 						row(to_integer(row_counter))<= '1';
-					elsif GRcount = "1111001" and DE ="011" then
+					elsif red2win = '1' then
 						Rcol<= win9(to_integer(row_counter));
 						Gcol<= ClrScr(to_integer(row_counter));
 						row <=(others => '0');

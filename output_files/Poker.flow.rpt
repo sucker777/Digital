@@ -1,5 +1,5 @@
 Flow report for Poker
-Mon Jun 14 18:36:03 2021
+Tue Jun 15 21:39:34 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Jun 14 18:36:03 2021       ;
+; Flow Status                     ; Successful - Tue Jun 15 21:39:34 2021       ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                   ; Poker                                       ;
 ; Top-level Entity Name           ; Poker                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 74 / 56,480 ( < 1 % )                       ;
-; Total registers                 ; 64                                          ;
-; Total pins                      ; 16 / 268 ( 6 % )                            ;
+; Logic utilization (in ALMs)     ; 156 / 56,480 ( < 1 % )                      ;
+; Total registers                 ; 106                                         ;
+; Total pins                      ; 53 / 268 ( 20 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/14/2021 18:09:50 ;
+; Start date & time ; 06/15/2021 21:36:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Poker               ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 39908806478728.162366539027264                             ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 39908806478728.162376416912276                             ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                         ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                ; --            ; --          ; eda_simulation ;
@@ -100,36 +100,16 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4846 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:29     ; 3.2                     ; 7319 MB             ; 00:01:00                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 4813 MB             ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.3                     ; 5271 MB             ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4660 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; Total                     ; 00:01:11     ; --                      ; --                  ; 00:01:43                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4867 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:34     ; 4.3                     ; 7333 MB             ; 00:01:15                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 4806 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 5280 MB             ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:57     ; --                      ; --                  ; 00:01:38                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -142,26 +122,6 @@ agreement for further details.
 ; Fitter                    ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
 ; Assembler                 ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; Revision-PC      ; Windows 7 ; 6.2        ; x86_64         ;
@@ -181,26 +141,6 @@ quartus_eda --read_settings_files=off --write_settings_files=off Poker -c Poker
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST_FINAL.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST_FINAL.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Poker -c Poker --vector_source=C:/Users/PartMent/Documents/Quartus/Poker/TEST.vwf --testbench_file=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/TEST.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/PartMent/Documents/Quartus/Poker/simulation/qsim/ Poker -c Poker
 
 
